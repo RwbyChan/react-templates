@@ -1,8 +1,11 @@
 # react-templates
 
-## Available:
-- components
+## Install:
+1. `npm install rwby-react-templates --save`
+2. Go to your package.json and add a new entry in the scripts: `"rrt": "node ./node_modules/rwby-react-templates/index"`
+3. Now you can use `npm run rrt [type] [name]`
 
-## Create component:
-1. add a new entry to your package.json within scripts, for example `create-component` and the value should be `"node ./node_modules/rwby-react-templates/generate_component"`
-2. now you can use `npm run create-component` followed by what you want the component to be called.
+## Types:
+- compontent (or c)
+- service (or s)
+- model (or m)
