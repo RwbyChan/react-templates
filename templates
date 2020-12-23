@@ -1,0 +1,30 @@
+// component.tsx
+exports.component = name => `
+import React from 'react';
+import styles from './${name}.css';
+
+class ${name} extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      
+    }
+  }
+  
+  render(){
+    // CODE
+
+
+    // VIEW
+    return(
+      <div>${name} works!</div>
+    )
+  }
+}
+export default ${name};
+`;
+
+exports.style = name => `
+.${name} {}
+`
