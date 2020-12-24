@@ -2,8 +2,9 @@ const fs = require('fs');
 const log = require('fancylog')
 const { component, style, service, model } = require('./templates.js');
 const { exit } = require('process');
+const npmc = require('npm-commands');
 
-var types = ["component", "c", "service", "s", "model", "m"];
+var types = ["project", "p", "component", "c", "service", "s", "model", "m"];
 
 var type = process.argv[2];
 var name = process.argv[3];
@@ -18,6 +19,15 @@ if(!types.includes(type)) {
 
 function writeFileErrorHandler(err) {
     if (err) throw err;
+}
+
+
+if(type == "project" || type == "p") {
+  try {
+    npmc().cwd(__dirname).arguments(false).run('create-project ' + process.argv[3]);
+  } catch(e) {
+    log.error(e);
+  }
 }
 
 if(type == "component" || type == "c") {
