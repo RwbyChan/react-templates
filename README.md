@@ -6,6 +6,7 @@
 3. Now you can use `npm run rrt [type] [name]`
 
 ## Types:
+- project (or p) => this will use the command `npx create-react-app` to create a new React project
 - compontent (or c)
 - service (or s)
 - model (or m)
